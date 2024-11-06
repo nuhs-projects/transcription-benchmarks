@@ -11,9 +11,9 @@ dependencies = [
     "multi-model-server>=1.1.11",
     "python-utils",
     "sagemaker[local]>=2.232.1",
-    "torch>=2.5.1",
-    "torchaudio>=2.5.1",
-    "torchvision>=0.20.1",
+    "torch==2.5.1+cu124",
+    "torchaudio==2.5.1+cu124",
+    "torchvision==0.20.1+cu124",
     "transformers>=4.37.0",
     "typed-ffmpeg>=2.0.0",
 ]
@@ -30,10 +30,18 @@ dev-dependencies = [
 ]
 package = true
 
+[[tool.uv.index]]
+name = "pytorch-cu124"
+url = "https://download.pytorch.org/whl/cu124"
+explicit = true
+
 [tool.uv.sources]
 faster-whisper = { git = "https://github.com/SYSTRAN/faster-whisper" }
 faster-whisper-types = { git = "https://github.com/nuhs-projects/faster-whisper-types" }
 python-utils = { git = "https://github.com/extrange/python-utils" }
+torch = { index = "pytorch-cu124" }
+torchvision = { index = "pytorch-cu124" }
+torchaudio = { index = "pytorch-cu124" }
 
 [tool.pyright]
 # pre-commit: make pyright use the venv
