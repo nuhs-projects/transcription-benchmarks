@@ -13,18 +13,18 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Format
-        uses: astral-sh/ruff-action@v1
+        uses: astral-sh/ruff-action@d0a0e814ec17e92d33be7d24dd922b479f1bcd38 # v1
         with:
           args: "format --check"
 
       - name: Lint
-        uses: astral-sh/ruff-action@v1
+        uses: astral-sh/ruff-action@d0a0e814ec17e92d33be7d24dd922b479f1bcd38 # v1
 
       - name: Install uv
-        uses: astral-sh/setup-uv@v3
+        uses: astral-sh/setup-uv@a7e15805d229f8677c5ddf08590a8cb972658599 # v3
         with:
           version: "latest"
 
@@ -38,7 +38,7 @@ jobs:
         run: uv sync --all-extras --dev
 
       - name: Install ffmpeg
-        uses: FedericoCarboni/setup-ffmpeg@v3
+        uses: FedericoCarboni/setup-ffmpeg@36c6454b5a2348e7794ba2d82a21506605921e3d # v3
 
       - name: Run tests (ignoring test_bench.py as it requires GPU)
         run: |
