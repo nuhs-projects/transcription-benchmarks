@@ -1,5 +1,6 @@
 import logging
 import time
+from dataclasses import asdict
 from pathlib import Path
 
 import torch
@@ -128,7 +129,7 @@ def _run_fw_model(
         time_taken_s=transcribe_time,
         gpu_mem_bytes=memory_peak,
         audio_duration_s=audio_duration,
-        fw_transcription_info=info._asdict(),
+        fw_transcription_info=asdict(info),
     )
 
 
