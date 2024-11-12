@@ -15,6 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
+      - name: Secret Scanning
+        uses: trufflesecurity/trufflehog@main
+        with:
+          extra_args: --only-verified
+
       - name: Format
         uses: astral-sh/ruff-action@d0a0e814ec17e92d33be7d24dd922b479f1bcd38 # v1
         with:
@@ -27,6 +32,7 @@ jobs:
         uses: astral-sh/setup-uv@a7e15805d229f8677c5ddf08590a8cb972658599 # v3
         with:
           version: "latest"
+          enable-cache: true
 
       - name: Set up Python
         run: uv python install
