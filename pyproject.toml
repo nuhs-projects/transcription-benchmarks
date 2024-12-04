@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "brotli>=1.1.0",
-    "faster-whisper>=1.1.0",
     "faster-whisper-types",
     "multi-model-server>=1.1.11",
     "python-utils",
