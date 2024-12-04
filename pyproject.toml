@@ -6,8 +6,8 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "brotli>=1.1.0",
+    "faster-whisper>=1.1.0",
     "faster-whisper-types",
-    "faster-whisper>=1.0.3",
     "multi-model-server>=1.1.11",
     "python-utils",
     "sagemaker[local]>=2.232.1",
@@ -36,7 +36,6 @@ url = "https://download.pytorch.org/whl/cu124"
 explicit = true
 
 [tool.uv.sources]
-faster-whisper = { git = "https://github.com/SYSTRAN/faster-whisper" }
 faster-whisper-types = { git = "https://github.com/nuhs-projects/faster-whisper-types" }
 python-utils = { git = "https://github.com/extrange/python-utils" }
 torch = { index = "pytorch-cu124" }
