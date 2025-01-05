@@ -477,7 +477,7 @@ wheels = [
 [[package]]
 name = "faster-whisper-types"
 version = "0.1.1"
-source = { git = "https://github.com/nuhs-projects/faster-whisper-types#9254a98d8ad29ac73940203cf0b64d5dc48c67f0" }
+source = { git = "https://github.com/nuhs-projects/faster-whisper-types#8eec0b879a171ee85eedd88fea90bc3e85e5e0d3" }
 dependencies = [
     { name = "faster-whisper" },
     { name = "pydantic" },
