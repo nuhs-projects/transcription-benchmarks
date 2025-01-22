@@ -29,7 +29,7 @@ jobs:
         uses: astral-sh/ruff-action@31a518504640beb4897d0b9f9e50a2a9196e75ba # v3
 
       - name: Install uv
-        uses: astral-sh/setup-uv@887a942a15af3a7626099df99e897a18d9e5ab3a # v5
+        uses: astral-sh/setup-uv@b5f58b2abc5763ade55e4e9d0fe52cd1ff7979ca # v5
         with:
           version: "latest"
           enable-cache: true
