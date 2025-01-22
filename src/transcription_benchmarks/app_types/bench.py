@@ -100,4 +100,4 @@ class BenchResult(BaseModel):
     def get_stats(self) -> str:
         """Return formatted statistics."""
         speed = self.audio_duration_s / self.time_taken_s
-        return f"Took {self.time_taken_s:.1f}s ({speed:.1f}x) for model={self.model}, file={self.params.test_file}, peak memory={self.gpu_mem_bytes/1_000_000:.1f}MB"
+        return f"Took {self.time_taken_s:.1f}s ({speed:.1f}x) for model={self.model}, file={self.params.test_file}, peak memory={self.gpu_mem_bytes / 1_000_000:.1f}MB"

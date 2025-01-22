@@ -6,4 +6,5 @@
             "source.organizeImports": "always"
         }
     },
+    "python.defaultInterpreterPath": ".venv/bin/python"
 }
