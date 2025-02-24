@@ -98,6 +98,10 @@ res.get_text(with_timestamps=True)
 
 ## FAQ
 
+### What is the difference between CUDA runtime API and the CUDA driver API?
+
+Refer to this [answer].
+
 ### Unable to load any of {libcudnn_ops.so.9.1.0, libcudnn_ops.so.9.1, libcudnn_ops.so.9, libcudnn_ops.so} Invalid handle. Cannot load symbol cudnnCreateTensorDescriptor
 
 This is caused by `ctranslate>=4.5.0` not being able to locate the CuDNN v9 libraries. There is a [known incompatibility](https://github.com/SYSTRAN/faster-whisper/issues/1086) between Pytorch and CTranslate2 versions currently.
@@ -121,6 +125,7 @@ PyTorch is using your system's CuDNN library and not its bundled one. Confirm th
 
 Either point `LD_LIBRARY_PATH` to PyTorch's bundled version, or [uninstall CuDNN and CUDA] from your system.
 
+[answer]: https://stackoverflow.com/questions/53422407/different-cuda-versions-shown-by-nvcc-and-nvidia-smi
 [test-files]: test_audio/readme.md
 [support matrix]: https://docs.nvidia.com/cuda/cuda-toolkit-release-notes/index.html#id5
 [CUDA compatibility]: https://docs.nvidia.com/deploy/cuda-compatibility/index.html
