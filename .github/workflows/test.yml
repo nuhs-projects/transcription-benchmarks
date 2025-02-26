@@ -21,15 +21,15 @@ jobs:
           extra_args: --only-verified
 
       - name: Format
-        uses: astral-sh/ruff-action@a7b1296fb5bd3ebb270731d1782bf05a97806e29 # v3
+        uses: astral-sh/ruff-action@39f75e526a505e26a302f8796977b50c13720edf # v3
         with:
           args: "format --check"
 
       - name: Lint
-        uses: astral-sh/ruff-action@a7b1296fb5bd3ebb270731d1782bf05a97806e29 # v3
+        uses: astral-sh/ruff-action@39f75e526a505e26a302f8796977b50c13720edf # v3
 
       - name: Install uv
-        uses: astral-sh/setup-uv@4db96194c378173c656ce18a155ffc14a9fc4355 # v5
+        uses: astral-sh/setup-uv@1edb52594c857e2b5b13128931090f0640537287 # v5
         with:
           version: "latest"
           enable-cache: true
